@@ -19,6 +19,7 @@
   padding: 0;
   box-sizing: inherit;
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
   display: flex;
   max-width: 100%;
   padding: 1em 6em;
-  height: 6vh;
+  height: 55px;
   justify-content: space-between;
 }
 
@@ -63,8 +64,12 @@ body {
   background-color: var(--color-primary);
   font-size: 1rem;
   border-radius: 4rem;
-  padding: 0.8em 1.25em;
+  padding: 1rem 1.25em;
   border: none;
+  cursor: pointer;
+}
+.open__account:hover {
+  background-color: var(--color-primary-darker);
 }
 
 .hero-section {
@@ -104,6 +109,7 @@ body {
   background-color: inherit;
   padding: 0.5rem 0;
   border-bottom: 1px solid var(--color-primary);
+  cursor: pointer;
 }
 
 .right-hero-section {
@@ -221,11 +227,22 @@ body {
 .instant-transfer {
   background-color: var(--color-secondary);
 }
+
+.instant-transfer:hover {
+  background-color: var(--color-secondary-darker);
+}
 .instant-load {
   background-color: var(--color-primary);
 }
+
+.instant-load:hover {
+  background-color: var(--color-primary-darker);
+}
 .instant-closing {
   background-color: var(--color-tertiary);
+}
+.instant-closing:hover {
+  background-color: var(--color-tertiary-darker);
 }
 
 .content h1 {
