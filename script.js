@@ -1,6 +1,7 @@
 // 'use strict';
 
 import { tabData } from './data.js';
+import { testimonialData } from './testimonial.js';
 
 ///////////////////////////////////////
 // Modal window
@@ -37,10 +38,23 @@ import { tabData } from './data.js';
 const instantTransfer = document.querySelector('.instant-transfer');
 const instantLoad = document.querySelector('.instant-load');
 const instantClosing = document.querySelector('.instant-closing');
+const testimonialTitle = document.querySelector('.testimonial-container-title');
+const testimonialContent = document.querySelector(
+  '.testimonial-container-content'
+);
+const avatar = document.querySelector('.avatar');
+const userName = document.querySelector('.user-name');
+const location = document.querySelector('.location');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+
+let current = 0;
 
 instantTransfer.addEventListener('click', () => getTabData(0));
 instantLoad.addEventListener('click', () => getTabData(1));
 instantClosing.addEventListener('click', () => getTabData(2));
+leftArrow.addEventListener('click', leftTestimonial);
+rightArrow.addEventListener('click', rightTestimonial);
 
 function getTabData(id) {
   const tabMainTitle = document.querySelector('.content-main-title');
@@ -49,4 +63,29 @@ function getTabData(id) {
   tabMainContent.textContent = tabData[id].content;
 }
 
+function getTestimonialData(id) {
+  testimonialTitle.textContent = testimonialData[id].title;
+  testimonialContent.textContent = testimonialData[id].testimonial;
+  avatar.src = testimonialData[id].avatar;
+  userName.textContent = testimonialData[id].name;
+  location.textContent = testimonialData[id].location;
+}
+
+function leftTestimonial() {
+  --current;
+  if (current < 0) {
+    current = testimonialData.length - 1;
+  }
+  getTestimonialData(current);
+}
+
+function rightTestimonial() {
+  ++current;
+  if (current > testimonialData.length - 1) {
+    current = 0;
+  }
+  getTestimonialData(current);
+}
+
 getTabData(0);
+getTestimonialData(0);
