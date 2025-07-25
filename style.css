@@ -284,7 +284,7 @@ body {
 
 @media (min-width: 920px) {
   * {
-    border: 1px solid red;
+    border: 1px solid blue;
   }
   .hero {
     display: flex;
@@ -319,17 +319,76 @@ body {
   .menu {
     display: none;
   }
+  .hero-body {
+    display: flex;
+    justify-content: center;
+  }
 
   .left-hero-section {
-    width: 50%;
+    width: 40%;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
   }
 
   .left-hero-title {
     text-align: start;
-    font-size: 3rem;
+    font-size: 3.5rem;
+  }
+  .left-hero-subtitle {
+    text-align: start;
+    font-size: 1.5rem;
+    margin-left: -7rem;
+  }
+
+  .hero-learn-more {
+    background-color: transparent;
+    color: var(--color-primary);
+    margin-left: -31rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  .hero-learn-more:hover {
+    background-color: transparent;
   }
 
   .right-hero-section {
     display: flex;
+    width: 40%;
+  }
+
+  .right-hero-section img {
+    width: 100%;
+  }
+
+  .feature-section {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .first-feature,
+  .third-section {
+    display: flex;
+    justify-content: center;
+
+    padding: 2rem;
+  }
+  .right-feature-section,
+  .left-feature-section {
+    width: 50%;
+  }
+
+  .right-feature-title {
+    text-align: start;
+    font-size: 3rem;
+  }
+  .right-feature-content {
+    font-size: 1.3rem;
+    text-align: start;
+  }
+  .second-feature {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
   }
 }
