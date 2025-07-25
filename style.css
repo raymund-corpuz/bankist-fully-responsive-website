@@ -67,7 +67,7 @@ body {
 .left-hero-subtitle {
   font-size: 1.25rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .hero-learn-more {
@@ -283,9 +283,6 @@ body {
 }
 
 @media (min-width: 920px) {
-  * {
-    border: 1px solid blue;
-  }
   .hero {
     display: flex;
     flex-direction: column;
@@ -293,7 +290,7 @@ body {
   }
   .nav__bar {
     display: flex;
-    border: 1px solid blue;
+
     justify-content: space-between;
     align-items: center;
     margin: 0;
@@ -322,29 +319,25 @@ body {
   .hero-body {
     display: flex;
     justify-content: center;
+    width: 80vw;
+    margin: 0 auto;
   }
 
   .left-hero-section {
-    width: 40%;
-    border: 1px solid blue;
-    display: flex;
-    flex-direction: column;
+    width: 50%;
   }
 
   .left-hero-title {
-    text-align: start;
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
   .left-hero-subtitle {
-    text-align: start;
     font-size: 1.5rem;
-    margin-left: -7rem;
   }
 
   .hero-learn-more {
     background-color: transparent;
     color: var(--color-primary);
-    margin-left: -31rem;
+
     font-size: 1.3rem;
     cursor: pointer;
   }
@@ -355,7 +348,7 @@ body {
 
   .right-hero-section {
     display: flex;
-    width: 40%;
+    width: 50%;
   }
 
   .right-hero-section img {
@@ -370,7 +363,7 @@ body {
   .third-section {
     display: flex;
     justify-content: center;
-
+    align-items: center;
     padding: 2rem;
   }
   .right-feature-section,
@@ -378,17 +371,74 @@ body {
     width: 50%;
   }
 
+  .left-feature-section img {
+    max-width: 100%;
+  }
+
   .right-feature-title {
     text-align: start;
     font-size: 3rem;
+    margin-left: 2rem;
   }
   .right-feature-content {
     font-size: 1.3rem;
     text-align: start;
+    margin-left: 2rem;
   }
   .second-feature {
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
+
+    justify-content: center;
+  }
+
+  .operation-section {
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .operation-modal {
+    display: flex;
+    flex-direction: column;
+    width: 768px;
+    margin: 0 auto;
+  }
+  .operation-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content-main-title {
+    font-size: 2rem;
+  }
+  .content-main-content {
+    font-size: 1.3rem;
+  }
+
+  .testimonial-section {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .main-container {
+    width: 600px;
+    height: 200px;
+  }
+  .testimonial-container-title {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .testimonial-container-content {
+    font-size: 1.2rem;
+  }
+  .profile-info {
+    margin: 0 auto;
+  }
+  .testimonial-container {
+    height: 300px;
+    margin: 2rem;
+  }
+  .footer-tagline {
+    width: 768px;
+    font-size: 2rem;
   }
 }
