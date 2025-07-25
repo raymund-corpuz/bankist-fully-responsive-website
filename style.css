@@ -281,3 +281,55 @@ body {
   font-size: 0.9rem;
   text-decoration: none;
 }
+
+@media (min-width: 920px) {
+  * {
+    border: 1px solid red;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .nav__bar {
+    display: flex;
+    border: 1px solid blue;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    height: 65px;
+    padding: 0 3rem;
+  }
+  .nav__links,
+  .nav__items {
+    display: flex;
+    align-items: center;
+  }
+  .nav__link {
+    margin: 0 1rem;
+    list-style-type: none;
+  }
+
+  .nav__link a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .left-hero-section {
+    width: 50%;
+  }
+
+  .left-hero-title {
+    text-align: start;
+    font-size: 3rem;
+  }
+
+  .right-hero-section {
+    display: flex;
+  }
+}
